@@ -26,6 +26,9 @@
         margin: 32px;
         padding: 16px;
         border-radius: 8px;
+        text-transform: uppercase;
+
+        max-width: 80%;
 
         &:focus {
             outline: none;

@@ -4,45 +4,52 @@
 
     let input: string = ""
 
-    let word_list = ["pirate"]
-
     let word_images = {
-        pirate: "/images/pirate.jpg",
+        pirates: "/images/clues/pirates.jpg",
+        artillery: "/images/clues/cannon.jpg",
+        trireme: "/images/clues/atheneum.jpg",
+        tropical: "/images/clues/tropical.jpg",
+        boulder: "/images/clues/boulder.jpg",
+        acid: "/images/clues/acid.jpg",
+        ten: "/images/clues/polyhedron.jpg",
     }
 
-    $: image = word_images[input]
+    $: image = word_images[input.toLowerCase()]
 </script>
 
+<svelte:head>
+    <title>Pirates The Stack</title>
+</svelte:head>
+
 <main>
-    <video autoplay muted loop>
-        <source src="/ocean.webm" type="video/mp4" />
-    </video>
-
     <div>
-        <TextField bind:text={input} />
-
+        <img src="/images/logo.png" />
         <Popup src={image} />
+        <TextField bind:text={input} />
     </div>
 </main>
 
 <style lang="scss">
     main {
-        background: url("/images/ocean.webm");
-        background-position: center;
-
         min-height: 100vh;
 
-        video {
-            z-index: -1;
-            position: absolute;
+        background: url("/images/background.jpg");
+        background-position: center;
+        background-size: cover;
 
-            width: 100vw;
-            height: 100vh;
-            object-fit: cover;
-        }
+        display: flex;
+        flex-direction: column-reverse;
 
         div {
             z-index: 10;
+        }
+
+        img {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+
+            max-width: 60%;
         }
     }
 </style>
