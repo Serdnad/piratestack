@@ -5,13 +5,15 @@
     let input: string = ""
 
     let word_images = {
-        pirates: "/images/clues/pirates.jpg",
-        artillery: "/images/clues/cannon.jpg",
-        trireme: "/images/clues/atheneum.jpg",
-        tropical: "/images/clues/tropical.jpg",
-        boulder: "/images/clues/boulder.jpg",
-        acid: "/images/clues/acid.jpg",
-        ten: "/images/clues/polyhedron.jpg",
+        pirates: '/images/clues/PIRATES.jpg"',
+        artillery: "/images/clues/ARTILLERY.jpg",
+        trireme: "/images/clues/TRIREME.jpg",
+        tropical: "/images/clues/TROPICAL.jpg",
+        boulder: "/images/clues/BOULDER.jpg",
+        acid: "/images/clues/ACID.jpg",
+        arrrghten: "/images/clues/ARRRGHTEN.jpg",
+        mutiny: "/images/clues/MUTINY.jpg",
+        krebs: "/images/clues/KREBS.jpg",
     }
 
     $: image = word_images[input.toLowerCase()]
